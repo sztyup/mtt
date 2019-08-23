@@ -32,7 +32,7 @@ class BaseService
         if (array_key_exists('current_page', $data)) {
             $items = $data['data'];
             $last = $data['last_page'];
-            for($i = 2; $i < $last; $i++) {
+            for ($i = 2; $i < $last; $i++) {
                 $response = $this->getClient()->get(
                     $endpoint,
                     array_merge($parameters, [
