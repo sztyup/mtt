@@ -45,7 +45,7 @@ class Task2
         $horrors = [];
         $data = simplexml_load_string(self::loadFile());
         foreach ($data->movie as $movie) {
-            if ($movie->date < 2010 || !in_array('Horror', (array) $movie->genres, true)) {
+            if ($movie->date < $from || !in_array('Horror', (array) $movie->genres, true)) {
                 continue;
             }
 
